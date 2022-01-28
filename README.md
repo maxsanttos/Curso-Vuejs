@@ -55,3 +55,14 @@ Seus valores são armazenados como sendo uma nova propriedade da intência VUe, 
 As propriedades ..computed são armazenadas em cache com base em suas dependências. Uma propriedade computada somente reavaliará quando algumas de suas dependências forem alteradas.
 
 Se você deseja que os dados sejam armazenados em cache, use as propriedades Computadas, por outro lado, se você não deseja que os dados sejam armazenados em cache, use propriedades simples de Método.
+
+## set a new value for one computed properties
+
+definir um novo valor para uma propriedade computada
+
+## Informando um novo valor
+
+As computed Properties geralmente apenas retornam valores. Contudo, também é possível informar um novo valor para elas
+
+Para isso, é necessário informar um objeto para a property, e dentro dele haverá uma opção de **get** e **set**
+
