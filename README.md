@@ -49,3 +49,7 @@ Informamos esse valor no html através de **{{computed_property}}**
 
 1 - Métodos realizam _ações, eventos_, Computed properties _manipulam dados_
 
+2 - Computed Properties _ficam em cache_.
+Seus valores são armazenados como sendo uma nova propriedade da intência VUe, sendo requisistados apenas uma vez.
+
+
