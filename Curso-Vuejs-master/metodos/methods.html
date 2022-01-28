@@ -9,7 +9,7 @@
 <body>
     <div id="methods">
       <h1>{{message}}</h1>
-     
+        <input type="text" placeholder="Digite uma nova mensagem" v-on:blur="replaceMessage($event.target.value)">
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script>
@@ -22,6 +22,9 @@
             methods: {
                 reverseMessage: function () {
                     this.message = this.message.split('').reverse().join('');
+                },
+                replaceMessage(newMessage){
+                    this.message = newMessage;
                 }
             },
         })
