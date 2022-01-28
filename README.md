@@ -32,3 +32,4 @@ Podemos usar os método junto com a diretiva **v-on**
 
 2 - Métodos que esperam parâmetros Executam a função baseandi-se no que informado
 
+
