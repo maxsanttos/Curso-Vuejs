@@ -17,3 +17,18 @@ Em poucos palavras, é uma função criada na instânia Vue
 
 Permite realizar açoes em nossa aplicação
 
+## Quando usar?
+
+Interação com o usuário
+
+Manipulação dos dados da aplicação
+
+## Como criar ?
+
+Usamos a propriedade **methods** da instância VUE
+Podemos usar os método junto com a diretiva **v-on**
+
+1- Métodos "estáticos". Executem uma função definifa, sem esperar parâmetros
+
+2 - Métodos que esperam parâmetros Executam a função baseandi-se no que informado
+
