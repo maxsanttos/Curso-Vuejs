@@ -8,14 +8,23 @@
 </head>
 <body>
     <div id="app">
-        <h1>{{ message }}</h1>
+        <h1 v-bind:title="tagMessage">{{ message }}</h1>
+        <h2>Essa mensagem em letras garrafais seria: {{  message.toUpperCase()   }}</h2>
+        <p >Meu nome é {{person.name}} e Tenho {{person.age}} anos</p>
+        <span v-html="tag"></span>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script>
         let app = new Vue({
             el: '#app',
             data: {
-                message: 'Mensagem a ser exibida'
+                message: 'Mensagem a ser exibida',
+                person: {
+                    name: 'Max Suel',
+                    age: 20
+                },
+                tag:'<button>Clique aqui</button>',
+                tagMessage: 'Essa é uma tag de título'
             }
         })
     </script>
