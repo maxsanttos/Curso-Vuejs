@@ -7,6 +7,24 @@
     <title>Methods</title>
 </head>
 <body>
-    
+    <div id="methods">
+      <h1>{{message}}</h1>
+     
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script>
+        let methods = new Vue({
+            el: '#methods',
+            data: {
+                message: 'Mensagem a ser exibida',
+                
+            },
+            methods: {
+                reverseMessage: function () {
+                    this.message = this.message.split('').reverse().join('');
+                }
+            },
+        })
+    </script>
 </body>
 </html>
