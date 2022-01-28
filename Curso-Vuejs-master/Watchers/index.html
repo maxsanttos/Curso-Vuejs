@@ -10,9 +10,8 @@
 
     <body>
         <div id="app">
-            <h2>Nome:{{person.firstName}} </h2>
-            <h2>Nome completo (Computed):{{ fullName }}</h2>
-
+    
+            <input type="text" v-model="country">
 
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
@@ -20,26 +19,10 @@
             let app = new Vue({
                 el: '#app',
                 data: {
-                    person: {
-                        firstName: "Max",
-                        lastName: "Santtos"
-                    }
+                    country: 'Brasil'
 
                 },
-                computed: {
-                    fullName: {
-                        get: function () {
-                            return `${this.person.firstName} ${this.person.lastName}`
-                        },
-                        set: function (newValue) {
-                            let name = newValue.split(' ');
-
-                            this.person.firstName = name[0];
-                            this.person.lastName = name[1];
-                        }
-                    }
-
-                }
+              
 
             })
         </script>
