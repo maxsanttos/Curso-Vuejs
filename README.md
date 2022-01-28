@@ -32,4 +32,15 @@ Podemos usar os método junto com a diretiva **v-on**
 
 2 - Métodos que esperam parâmetros Executam a função baseandi-se no que informado
 
+## Computed Properties
 
+### O que é ?
+
+Uma maneira elegante de manipular nossos dados
+Permite criar uma propriedade nova baseando-se em uma já existente
+
+## Como Criar?
+
+Usamos a propriedade **computed** da instância Vue
+
+Informamos esse valor no html através de **{{computed_property}}
