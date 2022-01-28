@@ -44,3 +44,8 @@ Permite criar uma propriedade nova baseando-se em uma já existente
 Usamos a propriedade **computed** da instância Vue
 
 Informamos esse valor no html através de **{{computed_property}}**
+
+## Computed Properties vs Methods
+
+1 - Métodos realizam _ações, eventos_, Computed properties _manipulam dados_
+
