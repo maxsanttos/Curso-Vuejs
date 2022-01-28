@@ -43,4 +43,4 @@ Permite criar uma propriedade nova baseando-se em uma já existente
 
 Usamos a propriedade **computed** da instância Vue
 
-Informamos esse valor no html através de **{{computed_property}}
+Informamos esse valor no html através de **{{computed_property}}**
