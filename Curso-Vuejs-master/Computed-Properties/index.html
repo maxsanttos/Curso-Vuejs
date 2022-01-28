@@ -8,7 +8,8 @@
 </head>
 <body>
     <div id="computed">
-        <h2>Nome:{{person.firstName}} {{person.lastName}}</h2>
+        <h2>Nome:{{person.firstName}} </h2>
+        <h2>Nome completo: {{ fullName }}</h2>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script>
@@ -21,6 +22,12 @@
                 }
                 
             },
+            computed: {
+                fullName: function () {
+                    return `${this.person.firstName} ${this.person.lastName}`
+                 
+                }
+            }
            
         })
     </script>
