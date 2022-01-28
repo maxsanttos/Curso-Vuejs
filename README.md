@@ -66,3 +66,11 @@ As computed Properties geralmente apenas retornam valores. Contudo, também é p
 
 Para isso, é necessário informar um objeto para a property, e dentro dele haverá uma opção de **get** e **set**
 
+## Watchers
+
+## O que é?
+
+Um recurso do Vue que nos permite "espionar" a mudança de valores de alguma propriedade
+
+É como um "vigilante" que realiza alguma ação quando ocorre mudanças na aplicação
+
