@@ -52,4 +52,6 @@ Informamos esse valor no html através de **{{computed_property}}**
 2 - Computed Properties _ficam em cache_.
 Seus valores são armazenados como sendo uma nova propriedade da intência VUe, sendo requisistados apenas uma vez.
 
+As propriedades ..computed são armazenadas em cache com base em suas dependências. Uma propriedade computada somente reavaliará quando algumas de suas dependências forem alteradas.
 
+Se você deseja que os dados sejam armazenados em cache, use as propriedades Computadas, por outro lado, se você não deseja que os dados sejam armazenados em cache, use propriedades simples de Método.
