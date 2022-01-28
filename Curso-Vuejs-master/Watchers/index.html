@@ -22,6 +22,11 @@
                     country: 'Brasil'
 
                 },
+                watch: {
+                    country: function (newValue,oldValue) {
+                        console.log(newValue, oldValue);
+                    }
+                }
               
 
             })
