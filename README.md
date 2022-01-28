@@ -82,3 +82,8 @@ Informamos dentro dela o nome da propriedade que queremos monitorar e a função
 
 ## Ciclo de Vida do Vue
 
+O que é?
+
+Série de funções que são executadas em vários pontos durante a montagem de nossa aplicação
+
+Nos permitem executar determinado código antes, durante, e após a aplicação estar na página
