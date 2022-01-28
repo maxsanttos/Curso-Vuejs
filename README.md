@@ -79,3 +79,6 @@ Um recurso do Vue que nos permite "espionar" a mudança de valores de alguma pro
 Usamos a propriedade **watch** da instância Vue
 
 Informamos dentro dela o nome da propriedade que queremos monitorar e a função a ser executada;
+
+## Ciclo de Vida do Vue
+
