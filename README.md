@@ -90,7 +90,25 @@ Nos permitem executar determinado código antes, durante, e após a aplicação 
 
 ## Fnções que podem ser usadas
 
-1 - **BeforeCreate()** -> Executada assim que a instância Vue é criada, mas antes de os dados , eventos e watchers estarem disponíveis
-2 - **Create()** -> Executada assim que a instância Vue é criada.Tem à disposição os recursos básicos:dados, computed properties, events, watchers, etc.Contudo, a aplicação ainda não foi montada.
-3 - **BeforeMount()** -> Executada um pouco antes do processo de montagem da aplicação começar
-4 - **Mounted()** -> Chamada assim que o processo de montagem é finalizado,já tem acesso à propriedade this.el, para manipular o componente.
+1 - **beforeCreate()** -> Executada assim que a instância Vue é criada, mas antes de os dados , eventos e watchers estarem disponíveis
+2 - **create()** -> Executada assim que a instância Vue é criada.Tem à disposição os recursos básicos:dados, computed properties, events, watchers, etc.Contudo, a aplicação ainda não foi montada.
+3 - **beforeMount()** -> Executada um pouco antes do processo de montagem da aplicação começar
+4 - **mounted()** -> Chamada assim que o processo de montagem é finalizado,já tem acesso à propriedade this.el, para manipular o componente.
+5 - **beforeUpdate()** -> Chamada quando os dados são atualizados na página, mas antes de essas mundaças serem  refletidas no HTML
+6 - **update()** -> Chamada assim que o HTML é alterado devido à mudança de dados na instância VUE
+7 - **destroyed()** -> Chamada assim que a instância VUE é destruída.Nesse momento não é possível mais ter acesso aos recursos do VUE
+
+## Como usar?
+
+Basta informar nas propriedades da instância VUE o nome da função que queremos executar
+
+### Exemplo
+
+let app = new Vue({
+    created:function(){
+        console.log('A instância foi criada')
+    },
+    mounted: function(){
+        console.log('A aplicação foi montada')
+    }
+})
