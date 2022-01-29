@@ -87,3 +87,10 @@ O que é?
 Série de funções que são executadas em vários pontos durante a montagem de nossa aplicação
 
 Nos permitem executar determinado código antes, durante, e após a aplicação estar na página
+
+## Fnções que podem ser usadas
+
+1 - **BeforeCreate()** -> Executada assim que a instância Vue é criada, mas antes de os dados , eventos e watchers estarem disponíveis
+2 - **Create()** -> Executada assim que a instância Vue é criada.Tem à disposição os recursos básicos:dados, computed properties, events, watchers, etc.Contudo, a aplicação ainda não foi montada.
+3 - **BeforeMount()** -> Executada um pouco antes do processo de montagem da aplicação começar
+4 - **Mounted()** -> Chamada assim que o processo de montagem é finalizado,já tem acesso à propriedade this.el, para manipular o componente.
