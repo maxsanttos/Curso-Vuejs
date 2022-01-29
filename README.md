@@ -119,5 +119,5 @@ let app = new Vue({
 
 1 - **activated()** -> Chamada quando um componente com a estrutura keep-alive é ativado
 2 - **deactivated()** -> Chamada quando um componente com a estrutura keep-alive é desativado
-3 - **errorCaptured()** -> Chamada quando ocorre um erro em algum componente (**NOvidade versão 2.5 do vue**)
+3 - **errorCaptured()** -> Chamada quando ocorre um erro em algum componente (**Novidade versão 2.5 do vue**)
 
