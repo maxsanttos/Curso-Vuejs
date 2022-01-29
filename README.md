@@ -104,6 +104,7 @@ Basta informar nas propriedades da instância VUE o nome da função que queremo
 
 ### Exemplo
 
+'''
 let app = new Vue({
     created:function(){
         console.log('A instância foi criada')
@@ -112,3 +113,4 @@ let app = new Vue({
         console.log('A aplicação foi montada')
     }
 })
+'''
