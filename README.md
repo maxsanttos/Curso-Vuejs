@@ -134,3 +134,16 @@ Os dados em si não são alterados, apenas mudamos a maneira que o usuário os v
 No JavaScript, informamos a propriedade **filters** para a instância Vue. Cada filtro será uma função
 
 No HTML, podemos aplicar um filtro a qualquer valor usando a **|** (barra vertical) e o nome do filtro
+
+## Exemplo
+
+```
+let app = new Vue({
+    filter:{
+        meu_filtro:function(informacao){
+            //Aqui iremos formatar os dados e retorná-los
+        }
+    }
+})
+<p>{{variavel | meu_filtro}}</p>
+```
