@@ -121,3 +121,16 @@ let app = new Vue({
 2 - **deactivated()** -> Chamada quando um componente com a estrutura keep-alive é desativado
 3 - **errorCaptured()** -> Chamada quando ocorre um erro em algum componente (**Novidade versão 2.5 do vue**)
 
+## Filtro
+
+## O que são?
+
+Uma maneira de formatar(modelar alterar a forma) os dados que informamos em nossa página
+
+Os dados em si não são alterados, apenas mudamos a maneira que o usuário os vê.
+
+## Como criar?
+
+No JavaScript, informamos a propriedade **filters** para a instância Vue. Cada filtro será uma função
+
+No HTML, podemos aplicar um filtro a qualquer valor usando a **|** (barra vertical) e o nome do filtro
