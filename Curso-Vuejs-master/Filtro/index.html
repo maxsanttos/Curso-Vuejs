@@ -16,7 +16,7 @@
 
         <h2>O meu salário é: {{salary | real}}</h2>
 
-        <h2>{{msg}}</h2>
+        <h2>{{ msg | truncate(30, '...')}}</h2>
         
         <input type="text" placeholder="Digite seu salário" v-model="salary">
         </div>
