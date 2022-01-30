@@ -137,6 +137,7 @@ No HTML, podemos aplicar um filtro a qualquer valor usando a **|** (barra vertic
 
 ## Exemplo
 
+
 ```
 let app = new Vue({
     filter:{
@@ -156,7 +157,7 @@ Contudo, é importante lembrar que a parti do segundo filtro, a informação já
 
 ## Exemplo 2
 
-```dotnetcli
+```
 
 let app = new Vue({
     filters:{
@@ -168,4 +169,10 @@ let app = new Vue({
 <p>{{Variavel | meu_filtro1 | meu_filtro2}}</p> -> O filtro 2 já encontrará o dado com sua forma alterada
 
 ```
+
+## Conhecendo uma coleção de Filtros Personalizados
+
+nome da biblioteca no site de pacotes do npm -> vue2-filters
+<https://www.npmjs.com/package/vue2-filters>
+
 
