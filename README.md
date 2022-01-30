@@ -104,7 +104,7 @@ Basta informar nas propriedades da instância VUE o nome da função que queremo
 
 ### Exemplo
 
-```
+```dotnetcli
 let app = new Vue({
     created:function(){
         console.log('A instância foi criada')
@@ -135,10 +135,10 @@ No JavaScript, informamos a propriedade **filters** para a instância Vue. Cada 
 
 No HTML, podemos aplicar um filtro a qualquer valor usando a **|** (barra vertical) e o nome do filtro
 
-## Exemplo
+## Exemplo2
 
+```dotnetcli
 
-```
 let app = new Vue({
     filter:{
         meu_filtro:function(informacao){
@@ -157,7 +157,7 @@ Contudo, é importante lembrar que a parti do segundo filtro, a informação já
 
 ## Exemplo 2
 
-```
+```dotnetcli
 
 let app = new Vue({
     filters:{
@@ -175,11 +175,10 @@ let app = new Vue({
 nome da biblioteca no site de pacotes do npm -> vue2-filters
 <https://www.npmjs.com/package/vue2-filters>
 
-use a parte 2 **CDN** 
+use a parte 2 **CDN**
 
 ```dotnetcli
 
 <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
 
 ```
-
