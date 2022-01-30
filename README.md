@@ -147,8 +147,25 @@ let app = new Vue({
 })
 <p>{{variavel | meu_filtro}}</p>
 ```
+
 ## Aplicando mais de um filtro
 
 Podemos aplicar quantos filtros desejarmos no mesmo elemento
 
 Contudo, é importante lembrar que a parti do segundo filtro, a informação já estará formatada
+
+## Exemplo 2
+
+```dotnetcli
+
+let app = new Vue({
+    filters:{
+        meu_filtro1:function(informacao){},
+        meu_filtro2:function(informacao){},
+    }
+})
+
+<p>{{Variavel | meu_filtro1 | meu_filtro2}}</p> -> O filtro 2 já encontrará o dado com sua forma alterada
+
+```
+
