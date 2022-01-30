@@ -15,6 +15,8 @@
         <h1>Hello {{ name  | upper}} </h1>
 
         <h2>O meu salário é: {{salary | real}}</h2>
+
+        <h2>{{msg}}</h2>
         
         <input type="text" placeholder="Digite seu salário" v-model="salary">
         </div>
@@ -23,8 +25,9 @@
             let filters = new Vue({
                 el: '#filters',
                 data: {
-                    name: 'max',
-                    salary: 0
+                    name: 'Hcode Treinamento',
+                    salary: 0,
+                    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, doloribus. Voluptate vitae doloremque in reprehenderit quas, dolores exercitationem, eveniet non magni obcaecati amet harum mollitia veritatis atque maxime ex rem.'
 
                 },
                 filters:{
