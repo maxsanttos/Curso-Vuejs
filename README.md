@@ -175,4 +175,5 @@ let app = new Vue({
 nome da biblioteca no site de pacotes do npm -> vue2-filters
 <https://www.npmjs.com/package/vue2-filters>
 
-
+use a parte 2 **CDN** 
+<<script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>>
