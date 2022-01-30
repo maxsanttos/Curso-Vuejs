@@ -155,7 +155,7 @@ Podemos aplicar quantos filtros desejarmos no mesmo elemento
 
 Contudo, é importante lembrar que a parti do segundo filtro, a informação já estará formatada
 
-## Exemplo 2
+## Exemplo3
 
 ```dotnetcli
 
