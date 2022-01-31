@@ -316,3 +316,11 @@ Exibir o valor de uma propriedade da instância Vue no HTML
 
 Tem a mesma função das chaves duplas **{{propriedade}}**
 
+Como criar?
+
+Informamos o nome da propriedade na diretiva **v-text**
+Exemplo:**v-text="propriedade"
+
+É necessário criar uma propriedade com o mesmo nome na instância Vue.
+
+
