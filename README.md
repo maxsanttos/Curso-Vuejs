@@ -307,3 +307,12 @@ v-show -> **Exibe ou esconde** um elemento(Muda a propriedade CSS **display** da
 
 Mais lento. Exige mais do servidor pois sempre recria o elemento
 Use-o quando for improvável que a condição de exibição mude constantemente
+
+## V-text
+
+Qual sua função?
+
+Exibir o valor de uma propriedade da instância Vue no HTML
+
+Tem a mesma função das chaves duplas **{{propriedade}}**
+
