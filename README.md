@@ -85,7 +85,7 @@ Informamos dentro dela o nome da propriedade que queremos monitorar e a função
 
 ## Ciclo de Vida do Vue
 
-O que é?
+**O que é?**
 
 Série de funções que são executadas em vários pontos durante a montagem de nossa aplicação
 
@@ -197,7 +197,7 @@ No Vue.js uma diretiva informa quais ações devem ser aplicadas a um elemento H
 
 Diretivas - visão Geral
 
-O que é ?
+**O que é ?**
 
 Ela é informada como um atributo HTML normal, na tag de abertura dos elementos
 
@@ -256,13 +256,13 @@ Vue.directive('nome-diretiva',{
 
 ## v-if / v-else
 
-Qual sua função?
+**Qual sua função?**
 
 Define se uma tag deve ser exibida ou não com base em uma condição(condição simples ou expressão)
 
 Se a condição não for atendido, o elemento é removido da tela
 
-Como criar?
+**Como criar?**
 
 Informamos a condição dentro da tag com as diretivas **v-if, v-else ou v-else-if**
 
@@ -270,7 +270,7 @@ Exemplo: **v-if="condicao"**
 
 Podemos definir alguma propriedade dentro da instância Vue, para ser usada na condição
 
-Boas Práticas
+**Boas Práticas**
 
 Quando usamos v-if e v-else em elementos diferentes, é interessante adicionar o atributo key em cada um deles, evitando assim conflitos na renderização
 
@@ -291,7 +291,7 @@ Define se uma tag deve ser exibida ou não com base em uma condição(condição
 
 Se a condição não for atendida, o elemento será ocultado na tela.
 
-Como criar?
+**Como criar?**
 
 Informamos a condição dentro da tag com a diretiva **v-show**
 
@@ -310,13 +310,13 @@ Use-o quando for improvável que a condição de exibição mude constantemente
 
 ## V-text
 
-Qual sua função?
+**Qual sua função?**
 
 Exibir o valor de uma propriedade da instância Vue no HTML
 
 Tem a mesma função das chaves duplas **{{propriedade}}**
 
-Como criar?
+**Como criar?**
 
 Informamos o nome da propriedade na diretiva **v-text**
 Exemplo:**v-text="propriedade"
@@ -325,12 +325,12 @@ Exemplo:**v-text="propriedade"
 
 ## V-html
 
-Qual a função?
+**Qual a função?**
 
 Interpretar e exibir o valor HTML puro vindo de uma propriedade da instância Vue(Não é interpretado como um template Vue)
 Altera a propriedade **innerHTML** de uma tag
 
-Como Criar?
+**Como Criar?**
 
 Informamos o nome da propriedade na diretiva **v-html**
 Exemplo: **v-html="propriedade"**
