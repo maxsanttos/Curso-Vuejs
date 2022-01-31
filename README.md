@@ -297,3 +297,8 @@ Informamos a condição dentro da tag com a diretiva **v-show**
 
 Podemos definir alguma popriedade dentro da instância Vue, para ser usada na condição.
 
+## v-if vs v-show
+
+v-if -> **Insere ou remove** um elemento
+
+v-show -> **Exibe ou esconde** um elemento(Muda a propriedade CSS **display** da tag)
