@@ -11,7 +11,7 @@
     <body>
         <div id="directives">
             
-            
+            <div v-html="headerHTML"></div>
        
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
@@ -22,7 +22,13 @@
             let directives = new Vue({
                 el: '#directives',
                 data: {
-                    
+                    headerHTML: `
+                        <header>
+                            <h1 style="text-align:center">Hcode Treinamentto</h1>
+                            <img src="./assets/logo-hcode.svg" style="margin: auto 30%">
+                        </header>
+
+                    `
                     
 
                 }
