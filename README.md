@@ -284,3 +284,16 @@ Ex:
     Erro
 </div>
 ```
+
+## V-show
+
+Define se uma tag deve ser exibida ou não com base em uma condição(condição simples ou expressão)
+
+Se a condição não for atendida, o elemento será ocultado na tela.
+
+Como criar?
+
+Informamos a condição dentro da tag com a diretiva **v-show**
+
+Podemos definir alguma popriedade dentro da instância Vue, para ser usada na condição.
+
