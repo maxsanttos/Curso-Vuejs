@@ -302,3 +302,9 @@ Podemos definir alguma popriedade dentro da instância Vue, para ser usada na co
 v-if -> **Insere ou remove** um elemento
 
 v-show -> **Exibe ou esconde** um elemento(Muda a propriedade CSS **display** da tag)
+
+## Quando usar um ou outro v-if
+
+Mais lento. Exige mais do servidor pois sempre recria o elemento
+Use-o quando for improvável que a condição de exibição mude constantemente
+
