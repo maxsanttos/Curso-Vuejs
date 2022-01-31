@@ -186,3 +186,21 @@ use a parte 2 **CDN**
 
 ```
 
+## Modulo 2 Diretivas
+
+**O que é?**
+
+"Instrução ou norma que deve orientar uma ação ou atividade"
+_Diconário Priberam_
+
+No Vue.js uma diretiva informa quais ações devem ser aplicadas a um elemento HTML
+
+Diretivas - visão Geral
+
+O que é ?
+
+Ela é informada como um atributo HTML normal, na tag de abertura dos elementos
+
+É prefixada com **"V-"**, que deixando claro que aquele aributo é específico do vue.
+
+
