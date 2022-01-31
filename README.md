@@ -307,4 +307,3 @@ v-show -> **Exibe ou esconde** um elemento(Muda a propriedade CSS **display** da
 
 Mais lento. Exige mais do servidor pois sempre recria o elemento
 Use-o quando for improvável que a condição de exibição mude constantemente
-
