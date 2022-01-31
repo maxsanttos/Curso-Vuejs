@@ -270,7 +270,7 @@ Exemplo: **v-if="condicao"**
 
 Podemos definir alguma propriedade dentro da instância Vue, para ser usada na condição
 
-**Boas Práticas**
+***Boas Práticas**
 
 Quando usamos v-if e v-else em elementos diferentes, é interessante adicionar o atributo key em cada um deles, evitando assim conflitos na renderização
 
@@ -342,3 +342,19 @@ Exemplo: **v-html="propriedade"**
 Renderização dinêmica de HTML é uma porta aberta para ataques XSS
 Use essa diretiva em ambientes seguros e com cautela
 
+## v-once
+
+***Qual sua função**
+
+Exibir o vaor de uma propriedade da instância Vue apenas _uma vez_
+Deixe o elemento estático, pode ajudar na performance
+
+***Como criar?**
+
+Informamos a diretivas **v-once** na Tag que desejamos deixar estático
+(não espera parâmetros)
+***EXEMPLO**
+
+```dotnetcli
+<a v-once>{{propriedade}}</a>
+```
