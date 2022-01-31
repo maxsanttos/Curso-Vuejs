@@ -323,4 +323,22 @@ Exemplo:**v-text="propriedade"
 
 É necessário criar uma propriedade com o mesmo nome na instância Vue.
 
+## V-html
+
+Qual a função?
+
+Interpretar e exibir o valor HTML puro vindo de uma propriedade da instância Vue(Não é interpretado como um template Vue)
+Altera a propriedade **innerHTML** de uma tag
+
+Como Criar?
+
+Informamos o nome da propriedade na diretiva **v-html**
+Exemplo: **v-html="propriedade"**
+
+É necessário criar uma propriedade com o mesmo nome na instância VUE, contendo o HTML que queremos exibir
+
+## Cuidados
+
+Renderização dinêmica de HTML é uma porta aberta para ataques XSS
+Use essa diretiva em ambientes seguros e com cautela
 
