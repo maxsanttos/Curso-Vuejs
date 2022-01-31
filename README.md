@@ -182,3 +182,4 @@ use a parte 2 **CDN**
 <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
 
 ```
+
