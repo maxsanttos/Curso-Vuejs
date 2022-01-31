@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Diretivas: v-if e v-else</title>
+    </head>
+
+    <body>
+        <div id="directives">
+            
+        <h1 v-if="show">Hcode treinamentos</h1>
+       
+        <h3 key="available" v-if="tickets >= 50"</h3>>Há ingressos disponiveis</h3>
+
+        <h3 key="almost" v-else-if="tickets >= 1 ">Os ingressos estão quase acabando</h3>
+
+        <h3 key="empty" v-else>Os ingressos acabaram</h3>
+       
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+
+        <script>
+            let directives = new Vue({
+                el: '#directives',
+                data: {
+                    show: true,
+                    tickets: 500
+
+                }
+               
+            })
+        </script>
+    </body>
+</html>

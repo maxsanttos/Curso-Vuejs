@@ -203,6 +203,8 @@ Ela é informada como um atributo HTML normal, na tag de abertura dos elementos
 
 É prefixada com **"V-"**, que deixando claro que aquele aributo é específico do vue.
 
+O que iremos ver
+
 ## v-if
 
 ```dotnetcli
@@ -252,4 +254,33 @@ Vue.directive('nome-diretiva',{
 })
 ```
 
+## v-if / v-else
 
+Qual sua função?
+
+Define se uma tag deve ser exibida ou não com base em uma condição(condição simples ou expressão)
+
+Se a condição não for atendido, o elemento é removido da tela
+
+Como criar?
+
+Informamos a condição dentro da tag com as diretivas **v-if, v-else ou v-else-if**
+
+Exemplo: **v-if="condicao"**
+
+Podemos definir alguma propriedade dentro da instância Vue, para ser usada na condição
+
+Boas Práticas
+
+Quando usamos v-if e v-else em elementos diferentes, é interessante adicionar o atributo key em cada um deles, evitando assim conflitos na renderização
+
+Ex:
+
+```dotnetcli
+<div v-if="codicao" key="sucesso">
+    Sucesso
+</div>
+<div v-else key="error">
+    Erro
+</div>
+```
