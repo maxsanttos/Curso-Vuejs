@@ -203,4 +203,53 @@ Ela é informada como um atributo HTML normal, na tag de abertura dos elementos
 
 É prefixada com **"V-"**, que deixando claro que aquele aributo é específico do vue.
 
+## v-if
+
+```dotnetcli
+<h1 v-if="condicao">
+    Hello World
+</h1>
+```
+
+## v-for
+
+```dotnetcli
+<li v-for="item in items">
+    {{item}}
+</li>
+```
+
+## v-bind
+
+```dotnetcli
+<a v-bind:href="propriedadeUrl">
+    Hcode Treinamentos
+</a>
+```
+
+## v-model
+
+```dotnetcli
+<input
+type="text" v-model="propriedades">
+```
+
+## v-on
+
+```dotnetcli
+<button v-on:click="metodo">
+    Aperte Aqui
+</button>
+```
+
+## Diretivas Personalizadas
+
+```dotnetcli
+Vue.directive('nome-diretiva',{
+    inserted:function(el,binding){
+    
+    }
+})
+```
+
 
