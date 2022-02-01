@@ -12,15 +12,19 @@
         <h3 v-bind:style="{fontSize: textSize + 'px'} ">Hcode Treinamento</h3>
         <input type="text" placeholder="Digite o tamanho do texto" 
         v-model="textSize">
+        <h4 v-bind:style="{color:textColor}">Que a força esteja com você!</h4>
+        <input type="color" placeholder="Informa qual é a nova cor" v-model="textColor">
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
-    
+
     <script>
         let app = new Vue({
             el: '#app',
             data: {
-                textSize: 10
+                textSize: 10,
+                textColor: "blue",
                 
             },
             
