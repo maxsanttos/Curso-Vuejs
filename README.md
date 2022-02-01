@@ -186,7 +186,7 @@ use a parte 2 **CDN**
 
 ```
 
-## Modulo 2 Diretivas
+# Modulo 2 Diretivas
 
 **O que é?**
 
@@ -367,7 +367,7 @@ Informamos a diretivas **v-once** na Tag que desejamos deixar estático
 Exibir uma quantidade maior de informação, levando em conta uma lista de propriedades
 Usado para percorrer um array ou objeto com esses valores e exibir em uma tag repetidas vezes
 
-## Como criar?
+**Como criar?**
 
 Informamos a diretiva **v-for** na tag que desejamos repetir
 Exemplo: **v-for="intem in propriedade**
@@ -386,8 +386,6 @@ Ex.:
 </li>
 ```
 
-### Boa Práticas
-
 Nunca use o v-if com o v-for, pois isso pode gerar conflitos de renderização. é melhor adicionar o v-if em um elemento pai
 
 Ex.:
@@ -399,4 +397,42 @@ Ex.:
 ```
 
 ## V-bind
+
+**Qual sua função?**
+
+Vincular o valor de qualquer propriedade a uma variável do VUE
+Com isso podemos fazer com que importantes atributos como href, src, class, etc. Se tornem dinâmicos
+
+**Como criar?**
+
+Informamos a diretiva **v-bind** na tag que desejamos informar o atributo
+Exemplo:**v-bind:href="linkSite"**
+
+Essa diretiva possui uma forma abreviada de ser chamada, apenas informando **:**(dois-pontos) e o atributo que queremos tornar dinâmico
+Exemplo: **:src="imgSrc"**
+
+## Boas práticas
+
+É importante manter um padrão quando chamamos a forma abreviada das deretivas
+
+Se chamarmos uma forma abreviada,devemos usá-la sempre no contexto, mas não misturá-la com a forma convenional
+
+Ex.:
+
+```dotnetcli
+<input
+v-bind:value="valor"
+:placeholder="valor2"
+>
+```
+
+# Argumentos Dinâmicos
+
+## Essa é uma novidade da versão 2.6 do Vue
+
+Agora também é possével informar os argumentos para a diretiva de maneira dinâmica,se baseando em uma propriedade da instância Vue
+
+Para isso, basta informar **[]**(chaves) no lugar de um argumento
+
+Exemplo:**v-bind:[propriedade]="valor"**
 
