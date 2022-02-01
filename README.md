@@ -455,3 +455,15 @@ propriedade
 4 - Componentes
 ```
 
+**Como Criar?**
+
+Informamos a diretiva **v-model** na tag que desejamos realizar o two-way data binding
+
+Exemplo: 
+
+```dotnetcli
+<input type="text" v-model="message">
+```
+
+
+
