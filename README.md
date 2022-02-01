@@ -436,3 +436,4 @@ Para isso, basta informar **[]**(chaves) no lugar de um argumento
 
 Exemplo:**v-bind:[propriedade]="valor"**
 
+

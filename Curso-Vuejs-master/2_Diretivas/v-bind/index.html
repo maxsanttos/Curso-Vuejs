@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Diretivas: v-bind</title>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretivas: v-bind</title>
+  </head>
 
-    <body>
-        <div id="directives">
-            
-            
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <body>
+    <div id="directives">
+      <h2>Acesse o site abaixo</h2>
+      <a v-bind:href="url">Site da Hcode</a>
 
-        <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
 
-        <script>
-            let directives = new Vue({
-                el: '#directives',
-                data: {
-                  
-                }
-               
-            })
-        </script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+
+    <script>
+      let directives = new Vue({
+        el: '#directives',
+        data: {
+          url: 'https://www.hcode.com.br'
+        },
+
+      })
+
+    </script>
+  </body>
+
 </html>
