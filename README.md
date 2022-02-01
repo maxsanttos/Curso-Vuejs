@@ -465,5 +465,15 @@ Exemplo:
 <input type="text" v-model="message">
 ```
 
+## Modificadores
+
+Modificadores são propriedades que podemos informar junto com o **v-model**. Elas são função específicas, que podem ser muito úteis
+
+1 - **.number** -> Transforma o valor da propriedade de string para número
+
+2 - **.trim** -> Remove os espaços antes e depois da propriedade
+
+3 - **.lazy** - Definimos que os eventos de mudanças(change) serão ouvidos
+
 
 
