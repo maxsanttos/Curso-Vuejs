@@ -436,4 +436,22 @@ Para isso, basta informar **[]**(chaves) no lugar de um argumento
 
 Exemplo:**v-bind:[propriedade]="valor"**
 
+## v- model
+
+**Qual sua função?**
+
+Realizar uma ligação de dados bidirecional
+(two-way data binding)
+
+Com isso, ao alterar o valor de uma propriedade na camada view, também estaremos alterando o valor original desta mesma
+propriedade
+
+## ONDE PODEMOS USAR?
+
+```dotnetcli
+1 - tag **<input>**
+2 - tag **<slect>**
+3-  tag **<textarea>**
+4 - Componentes
+```
 
