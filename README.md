@@ -346,9 +346,10 @@ Use essa diretiva em ambientes seguros e com cautela
 
 ***Qual sua função**
 
-Exibir o vaor de uma propriedade da instância Vue apenas _uma vez_
+Exibir o valor de uma propriedade da instância Vue apenas _uma vez_
 Deixe o elemento estático, pode ajudar na performance
 
+"criptonita da vue"
 ***Como criar?**
 
 Informamos a diretivas **v-once** na Tag que desejamos deixar estático
