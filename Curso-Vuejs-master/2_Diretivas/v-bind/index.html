@@ -12,6 +12,7 @@
     <div id="directives">
       <h2>Acesse o site abaixo</h2>
       <a v-bind:href="url">Site da Hcode</a>
+      <p :[arg]="value">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, atque quis! Quibusdam ea exercitationem iure minus unde! Tenetur dicta necessitatibus laborum, modi magni quibusdam odio labore ea. Alias, ipsum nemo!</p>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
@@ -22,7 +23,9 @@
       let directives = new Vue({
         el: '#directives',
         data: {
-          url: 'https://www.hcode.com.br'
+          url: 'https://www.hcode.com.br',
+          arg: 'title',
+          value: 'Paragrafo de exemplo'
         },
 
       })
