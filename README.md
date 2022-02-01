@@ -477,5 +477,57 @@ Modificadores são propriedades que podemos informar junto com o **v-model**. El
 
 ## V-on
 
+**Qual sua função?**
+
+1 - Criar um ouvinte de evento.Isso é importante para que a aplicação fique mais reativa
+
+2 - Criar eventos personalizados, principalmente no contexto de componentes
+
+**Como criar?**
+
+Informamos a diretiva **v-on** na tag que desejamos aplicar o evento,
+junto com o nome dele
+Exemplo.: **V-on:click="metodo"**
+
+Essa diretiva possui uma forma abreviada de ser chamada,apenas informando **@**(arroba) e o 
+nome do evento que queremos definir
+Exemplo.:**@keyup="metodo"
+
+***Boas práticas**
+
+É importante manter um padrão quando chamarmos a forma abreviada das diretivas
+
+Se chamarmos uma forma abreviada, devemos usá-la sempre no contexto, mas não misturá-la com a forma convencional
+
+Ex.:
+
+```dotnetcli
+<input
+    v-on:mouseenter="method1"
+    @click
+>
+```
+
+### O que podemos informar para a diretiva?
+
+1 - O nome de um método
+**v-oon:click="nomeMetodo"**
+
+2 - Uma expressão JavaScript
+**@click="alert('Hello World')"**
+
+3 - Até mesmo não informar nada, se estivermos usando um modificador
+**@click.prevent**
+
+## Argumentos Dinâmicos
+
+**Essa é uma novidade da versão 2.6 do Vue**
+
+Agora também é possível informar os argumentos para a diretiva de maneira dinâmica,
+se baseando em uma propriedade da instância Vue
+
+Para isso, basta informar **[]**(chaves) no lugar de um argumento
+
+Exemplo.: **v-on:[proprieddade]="metodo"
 
 
