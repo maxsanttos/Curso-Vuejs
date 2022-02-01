@@ -449,9 +449,9 @@ propriedade
 ## ONDE PODEMOS USAR?
 
 ```dotnetcli
-1 - tag **<input>**
-2 - tag **<slect>**
-3-  tag **<textarea>**
+1 - tag <input>
+2 - tag <slect>
+3-  tag <textarea>
 4 - Componentes
 ```
 
