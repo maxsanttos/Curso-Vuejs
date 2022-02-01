@@ -5,14 +5,23 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Diretivas: v-once</title>
+        <title>Diretivas: v-for</title>
     </head>
 
     <body>
         <div id="directives">
             
-            <h1>{{ person.name }}}</h1>
-            <div v-once>{{ person.age }}</div>
+            <h2>Cidades do Mundo</h2>
+            <ol>
+               <!--<li v-for="city in cities">{{city}}</li>--> 
+               <li v-for="item in cities">{{item.city}} - {{item.country}}</li>
+
+               
+            </ol>
+            <h2>Grandes Filmes da Historia!</h2>
+            <ol>
+                <li v-for="filme in movies">{{filme}}</li>
+            </ol>
        
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
@@ -23,12 +32,26 @@
             let directives = new Vue({
                 el: '#directives',
                 data: {
-                  person:{
-                      name: 'Evan You',
-                      age: 28
-                  }
-                    
-
+                  //cities: ['New York','São Paulo','Londres','Rio de Janeiro']
+                  cities:[
+                      {
+                        city: 'New York',
+                        country: 'EUA'
+                      },
+                      {
+                        city: 'São Paulo',
+                        country: 'Brazil'
+                      },
+                      {
+                        city:'Londres',
+                        country:'Franca'
+                      },
+                      {
+                        city: 'Rio de Janeiro',
+                        country: 'Brazil'
+                      }
+                    ],
+                    movies:['Start Wars','Jurassic Park','De volta para o Futuro']
                 }
                
             })
