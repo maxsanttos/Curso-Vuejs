@@ -359,3 +359,41 @@ Informamos a diretivas **v-once** na Tag que desejamos deixar estático
 ```dotnetcli
 <a v-once>{{propriedade}}</a>
 ```
+
+***v-for**
+
+## Qual sua função?
+
+Exibir uma quantidade maior de informação, levando em conta uma lista de propriedades
+Usado para percorrer um array ou objeto com esses valores e exibir em uma tag repetidas vezes
+
+## Como criar?
+
+Informamos a diretiva **v-for** na tag que desejamos repetir
+Exemplo: **v-for="intem in propriedade**
+
+Podemos acessar também o índice do array ou o nome da propriedade objeto
+
+## Boa Práticas
+
+É essencial usar um atributo Key quando trabalharmos com o v-for
+
+Ex.:
+
+```dotnetcli
+<li v-for="movie in films" :key="movie.id">
+    {{ movie.name }}
+</li>
+```
+
+### Boa Práticas
+
+Nunca use o v-if com o v-for, pois isso pode gerar conflitos de renderização. é melhor adicionar o v-if em um elemento pai
+
+Ex.:
+
+```dotnetcli
+<div v-if="condicao">
+    <h2 v-for="name in persons">{{name}}</h2>
+</div>
+```
