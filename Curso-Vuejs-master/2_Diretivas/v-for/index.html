@@ -19,9 +19,9 @@
                
             </ol>
             <h2>Grandes Filmes da Historia!</h2>
-            <ol>
-                <li v-for="filme in movies">{{filme}}</li>
-            </ol>
+            <ul>
+                <li v-for="(picture, index) in movies">{{index}}. {{picture}}</li>
+            </ul>
        
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
