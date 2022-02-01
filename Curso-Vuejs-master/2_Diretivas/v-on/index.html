@@ -8,6 +8,8 @@
 </head>
 <body>
     <div id="app">
+        <p @click="reverseMenssage">{{ menssage }}</p>
+
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
@@ -16,8 +18,13 @@
         let app = new Vue({
             el: '#app',
             data: {
+                menssage: 'Vue.js é demais'
                 
-                
+            },
+            methods: {
+                reverseMenssage(){
+                    this.menssage = this.menssage.split('').reverse().join('');
+                } 
             },
             
         })
