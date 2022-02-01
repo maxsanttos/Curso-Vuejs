@@ -397,3 +397,6 @@ Ex.:
     <h2 v-for="name in persons">{{name}}</h2>
 </div>
 ```
+
+## V-bind
+
