@@ -5,43 +5,39 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Diretiva-v-slot</title>
+        <title>Diretiva-Criando-Diretivas-personalizada</title>
     </head>
 
     <body>
         <div id="app">
-            <text-component>
-                <template v-slot:header>
-                    <h2>Esse é o cabeçalho do site</h2>
-                </template>
-                Max Suel Santtos
-            </text-component>
-            <text-component>
-                Max Suel
-            </text-component>
-            <text-component>
-                Max
-            </text-component>
+           <h4 v-upper>{{ name }}</h4>
+
+           <h2 v-capitalize>hello world super mario</h2>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
         <script>
-            Vue.component('text-component',{
-                template: `
-                    <div>
-                        <header>
-                            <slot name="header"></slot>
-                        </header>
-                       <p>
-                            <slot></slot>
-                       </p>
-                    </div>
-                `
-            },)
-          let app = new Vue({
+            Vue.directive('upper',{
+                inserted(el){
+                    el.innerText = el.innerText.toUpperCase()
+                }
+            })
+            let app = new Vue({
               el: '#app',
               data:{
-
+                name: 'Hcode'
+              },
+              directives:{
+                  capitalize: function(element){
+                       let words = element.innerText.spli(' ');
+                       words.forEach((text,index) =>{
+                           words[index] = text.charAt(0).toUpperCase() + text.slice(1);
+                        });
+                        
+                        element.innerText = words.join(' ');
+                           
+                       
+                    }
               }
 
             })
