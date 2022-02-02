@@ -519,9 +519,9 @@ Ex.:
 3 - Até mesmo não informar nada, se estivermos usando um modificador
 **@click.prevent**
 
-## Argumentos Dinâmicos
+Argumentos Dinâmicos
 
-**Essa é uma novidade da versão 2.6 do Vue**
+***Essa é uma novidade da versão 2.6 do Vue**
 
 Agora também é possível informar os argumentos para a diretiva de maneira dinâmica,
 se baseando em uma propriedade da instância Vue
@@ -530,8 +530,35 @@ Para isso, basta informar **[]**(chaves) no lugar de um argumento
 
 Exemplo.: **v-on:[proprieddade]="metodo"
 
+## V-slot
 
+***Qual sua função?**
 
+Diretiva usada com componentes
 
+Usada para inserir conteúdo em um componente, através da tag **<temple>**
 
+***Como criar?**
+
+Informamos a diretiva **v-slot** no elemento que desejamos adiciona conteúdo, junto com seu
+nome como argumento
+Exemplo:**v-slot:div**
+
+Essa diretiva possui uma forma abreviada de ser chamada, apenas
+informando **#**(hashtag) e o nome do slot que queremos definir
+Exemplo:**#footer**
+
+***Boas práticas**
+
+É importante manteer um padrão quando chamarmos a forma abreviada das diretivas
+
+Se chamarmos uma forma abreviada,devemos usá-la convencional
+
+Ex.:
+
+```dotnetcli
+<templete v-slot:cabecalho>
+
+<template #site>
+```
 
