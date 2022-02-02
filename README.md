@@ -562,3 +562,27 @@ Ex.:
 <template #site>
 ```
 
+## V-pre
+
+***Qual sua função?**
+
+Desibilitar a compolação VUE no elemento em que for aplicado
+
+O Vue deixa de funcionar no elemento específico
+
+***Por que usar?**
+
+1 - Se desejarmos exibir as chaves de interpolação de variável no navegador
+
+2 - Se desejarmos aumentar a performance para renderizar nossa aplicação
+
+***Como ciar?**
+
+Informamos a diretiva **v-pre** na tag que desejamos desabilitar
+Exemplo:**<h2 v-pre>{{name}}</h2>**
+
+Essa diretiva não espera nenhum argumento
+O exemplo acima irá imprimir no navegador
+
+{{ name }}
+
