@@ -579,10 +579,44 @@ O Vue deixa de funcionar no elemento específico
 ***Como ciar?**
 
 Informamos a diretiva **v-pre** na tag que desejamos desabilitar
-Exemplo:**<h2 v-pre>{{name}}</h2>**
+Exemplo:
+
+```dotnetcli
+<h2 v-pre>{{name}}</h2>
+```
 
 Essa diretiva não espera nenhum argumento
 O exemplo acima irá imprimir no navegador
 
 {{ name }}
 
+## V-cloak
+
+***Qual sua função?**
+
+Garantir que os elementos serão exibidos apenas quando a instância Vue
+for completamente carregada
+
+Evitar que a página fique desestruturada ("quebrada) enquanto ocorre o carregamento
+
+***Comocriar?**
+
+Informamos a diretiva **v-cloak na tag que desejamos aplicar a inteligênia de espera
+Exemplo:
+
+```dotnetcli
+<h1 v-cloak>Seja bem-vindo {{ name }}</h1>
+```
+
+Essa diretiva não espera argumentos
+
+## A importância do CSS
+
+Para um funcionamento completo, é necessário
+adicionar um estilo CSS em nosso código, ocultando o elemento até o carregamento da página
+
+```dotnetcli
+[v-cloak]{
+    display:none;
+}
+```
