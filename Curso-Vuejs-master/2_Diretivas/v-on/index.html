@@ -12,8 +12,13 @@
 
         <h4 v-on:[event]="reverseMenssage">{{ menssage }}</h4>
 
+        <hr>
+
+        <input type="text" placeholder="Filtrar pessoas" 
+        v-on:keyup.13="filterPersons">
+
         <ul>
-            <li v-for="pernson in person">{{ person }}</li>
+            <li v-for="person in persons">{{ person }}</li>
         </ul>
 
 
@@ -26,7 +31,7 @@
             data: {
                 menssage: 'Vue.js é demais',
                 eventname: 'click',
-                person:['Antony Rafael','João Rangel','Glaucio','Daniel','Ronaldo Braz','Marcus Ribeiro','Djalma Sindeaux']
+                persons:['Antony Rafael','João Rangel','Glaucio','Daniel','Ronaldo Braz','Marcus Ribeiro','Djalma Sindeaux']
                 
             },
             methods: {
@@ -34,6 +39,11 @@
                     this.menssage = this.menssage.split('').reverse().join('');
                 } 
             },
+            filterPersons(event){
+                this.persons = persons.filter(name =>{
+                    return name.toUpperCase().includes(event.target.value)
+                })
+            }
             
         })
     </script>
