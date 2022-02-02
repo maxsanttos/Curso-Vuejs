@@ -652,7 +652,7 @@ Vue.directive('white',{
 <p v-white>Hello Hcode.</p>
 ```
 
-## Possíveis FUnções ao Criar uma Diretiva
+## Possíveis Funções ao Criar uma Diretiva
 
 ```dotnetcli
 1 - bind() -> Chamada quando a diretiva é vinculada a um elemento
