@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diretivas - v-ono</title>
+    <title>Diretivas - v-on</title>
 </head>
 <body>
     <div id="app">
         <p @click="reverseMenssage">{{ menssage }}</p>
 
         <h4 v-on:[event]="reverseMenssage">{{ menssage }}</h4>
+
+        <ul>
+            <li v-for="pernson in person">{{ person }}</li>
+        </ul>
 
 
     </div>
@@ -21,7 +25,8 @@
             el: '#app',
             data: {
                 menssage: 'Vue.js é demais',
-                eventname: 'click'
+                eventname: 'click',
+                person:['Antony Rafael','João Rangel','Glaucio','Daniel','Ronaldo Braz','Marcus Ribeiro','Djalma Sindeaux']
                 
             },
             methods: {
