@@ -15,10 +15,10 @@
         <hr>
 
         <input type="text" placeholder="Filtrar pessoas" 
-        v-on:keyup.13="filterPersons">
+        v-on:keyup="filterPersons">
 
         <ul>
-            <li v-for="person in persons">{{ person }}</li>
+            <li v-for="person in personsFiltred">{{ person }}</li>
         </ul>
 
 
@@ -31,19 +31,25 @@
             data: {
                 menssage: 'Vue.js é demais',
                 eventname: 'click',
-                persons:['Antony Rafael','João Rangel','Glaucio','Daniel','Ronaldo Braz','Marcus Ribeiro','Djalma Sindeaux']
+                persons:['Antony Rafael','João Rangel','Glaucio','Daniel','Ronaldo Braz','Marcus Ribeiro','Djalma Sindeaux'],
+                personsFiltred: []
                 
             },
             methods: {
                 reverseMenssage(){
                     this.menssage = this.menssage.split('').reverse().join('');
-                } 
+                },
+                filterPersons(event){
+                    this.personsFiltred = this.persons.filter(name => {
+                        return name.toUpperCase().includes(event.target.value.toUpperCase());  
+                    })
+                }
             },
-            filterPersons(event){
-                this.persons = persons.filter(name =>{
-                    return name.toUpperCase().includes(event.target.value)
-                })
-            }
+            created() {
+                this.personsFiltred = this.persons;
+            },
+           
+          
             
         })
     </script>
