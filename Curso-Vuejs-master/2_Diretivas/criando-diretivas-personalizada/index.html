@@ -10,37 +10,62 @@
 
     <body>
         <div id="app">
-           <h4 v-upper>{{ name }}</h4>
-
-           <h2 v-capitalize>hello world super mario</h2>
+            <h4 v-upper>{{ name }}</h4>
+            <h2 v-capitalize>hello world {{ name }}</h2>
+            <h2 v-custom>{{ name }}</h2>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
         <script>
-            Vue.directive('upper',{
-                inserted(el){
+            Vue.directive('upper', {
+                inserted(el) {
                     el.innerText = el.innerText.toUpperCase()
                 }
             })
             let app = new Vue({
-              el: '#app',
-              data:{
-                name: 'Hcode'
-              },
-              directives:{
-                  capitalize: function(element){
-                       let words = element.innerText.spli(' ');
-                       words.forEach((text,index) =>{
-                           words[index] = text.charAt(0).toUpperCase() + text.slice(1);
-                        });
-                        
-                        element.innerText = words.join(' ');
-                           
-                       
+                el: '#app',
+                data: {
+                    name: 'Hcode'
+                },
+                directives: {
+                    /*
+                    capitalize:{
+                        bind(element){
+                            console.log('BIND -Fui vinculado a um elemento ');
+                        },
+                        inserted(element) {
+                            console.log('INSERTED - O elemente foi inserido na página')
+                            let words = element.innerText.split(' ');
+                            words.forEach((text, index) => {
+                                words[index] = text.charAt(0).toUpperCase() + text.slice(1);
+                            });
+
+                            element.innerText = words.join(' ');
+                        },
+                        update(element) {
+                            console.log('UPDATE - O elemente foi atualizado na página')
+                        },
+                        unbind(elment){
+                            console.log('UNBIND - O elemente foi desvinculado na página')
+                        },
+                        componentUpdated(element){
+                            console.log('COMPONENT - O componente foi atualizado')
+                        }
+                    },
+                    */
+                    custom:{
+                        inserted(element){
+                            console.log(element);
+
+                            element.style.color = 'red'
+                        }
                     }
-              }
+
+                }
 
             })
+
         </script>
     </body>
+
 </html>
