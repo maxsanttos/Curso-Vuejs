@@ -620,3 +620,133 @@ adicionar um estilo CSS em nosso código, ocultando o elemento até o carregamen
     display:none;
 }
 ```
+
+# Criando Diretivas Personalizadas
+
+***Quando é necessário?**
+
+Em algumas situações. talvez as diretivas padrão do Vue não atendam
+à nossa necessidade
+
+Nesses casos podemos criar nossas próprias diretivas
+
+***Como criar?**
+
+1 - Globalmente
+**Vue.directive('nome-diretiva',{})
+
+2 - Localmente
+new Vue({
+    directives:{}
+})
+
+Exemplo
+
+```dotnetcli
+Vue.directive('white',{
+    inserted:function(elemento){
+        elemento.style.color ='white'
+    }
+})
+
+<p v-white>Hello Hcode.</p>
+```
+
+## Possíveis FUnções ao Criar uma Diretiva
+
+```dotnetcli
+1 - bind() -> Chamada quando a diretiva é vinculada a um elemento
+2 - inserted() -> Chamada quando o elemento vinculado é inserido no DOM
+3 - update() -> Chamada quando o elemento pai do elemento vinculado é atualizado
+4 - unbind() -> Chamada quando a diretiva é desvinculada de um elemento
+5 - componentUpdate() -> Chamada quando o componente é atualizado
+```
+
+Exemplo
+
+```dotnetcli
+Vue.directive('nome-diretiva',{
+    bind:function(elemento){
+        consolw.log('Fui vinculada a um elemento')
+    },
+    unbind:function(elemento){
+        console.log('Fui desvinculada de um elemento')
+    }
+})
+```
+
+Parâmetros
+
+```dotnetcli
+1 - el -> Elemento que a diretiva está vinculada
+2 - binding -> Um objeto que traz informações úteis, como
+o valor informado para a diretiva(value), o valor
+antigo(oldValue) e os modificadores(modifiers)
+3 - vnode -> O nó HTML virtual produzido pelo Vue
+4 - oldVnode -> O nó HTML virtual antigo(só terá um valor se estivermos nas funções update() ou componentUpdate())
+```
+
+Exemplo
+
+```dotnetcli
+Vue.directive('nome-diretiva',{
+    bind:function(el,binding){
+        console.log(`O valor informado foi ${binding.value}`)
+    }
+})
+```
+
+# Todas as opções da variável binding
+
+```dotnetcli
+1 - name -> Nome da diretiva, sem o prefixo "v-"
+2 - value -> Valor informado para a diretiva
+3 - oldValue -> Valor antigo da variável, se ela possuir
+4 - expression -> Expressão JavaScript infromada para a diretiva
+5 - modifiers -> Um objeto com todos os modificadores informados. Eles são identificados por meio do **.**(ponto)
+.Ex.: <p v-native.mod1>. Será retornado "{mod1:true}"
+6 - arg -> Se informarmos algum argumento para a diretiva com **:**(dois-pontos),ele será exibido aqui.Ex.:
+<img v-blank:argumento>.Será retornado "argumento"
+```
+
+## Argumento dinâmicos
+
+Assim como as diretivas v-bind e v-on, podemos criar argumentos dinâmicos, vindos da instância Vu, 
+e adicioná-los às nossas diretivas
+personalizadas
+
+Exemplo
+
+```dotnetcli
+new Vue({
+    data:{
+        name:'argumento'
+    }
+})
+
+<div v-star:[name]>May the force be with you</div>
+```
+
+## Recebemos vários valores
+
+É possível receber mais de um valor para nossa diretiva
+
+Para isso, basta informar um objeto para ela
+
+Exemplo
+
+```dotnetcli
+new Vue({
+    directives:{
+        edit-text:{
+            inserted:function(el,binding){
+                console.log(binding.value.size);
+                console.log(binding.value.color)
+            }
+        }
+    }
+})
+
+<h2 v-edit-text="{size:10,color:'red'}">Vue.js is Awesome</h2>
+```
+
