@@ -12,7 +12,9 @@
         <div id="app">
             <h4 v-upper>{{ name }}</h4>
             <h2 v-capitalize>hello world {{ name }}</h2>
-            <h2 v-custom:parametro.mod1.mod2="'Informação'">{{ name }}</h2>
+            <!--<h2 v-custom:parametro.mod1.mod2="'Informação'">{{ name }}</h2>-->
+            <h2 v-custom:left="150">{{ name }}</h2>
+
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
@@ -22,6 +24,27 @@
                     el.innerText = el.innerText.toUpperCase()
                 }
             })
+
+            function setDirection(element,binding){
+                element.style.margin = 0;
+
+                let direction = binding.arg.toLowerCase();
+                let value = binding.value;
+
+                switch (direction) {
+                    case 'left':
+                        element.style.marginLeft = value + 'px';
+                        break;
+                
+                    default:
+                        console.error('Informe uma opção correta')
+                        break;
+                }
+
+                console.log(element, binding);
+
+            }
+
             let app = new Vue({
                 el: '#app',
                 data: {
@@ -55,13 +78,14 @@
                     */
                     custom:{
                         inserted(element,binding,vnode){
-                            console.log(vnode);
+                            //console.log(vnode);
+                            //element.style.color = 'red'
+                            setDirection(element,binding)
 
-                            element.style.color = 'red'
                         },
                         update(element,binding,vnode,oldvnode) {
-                            console.log(vnode,oldvnode);
-                            element.style.text.Decoration = 'underline';
+                            //console.log(vnode,oldvnode);
+                            //element.style.text.Decoration = 'underline';
                         },
                     }
 
