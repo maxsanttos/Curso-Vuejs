@@ -4,28 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diretiva - v-cloak</title>
-    <style>
-        [v-cloak]{
-            display: none;
-        }
-    </style>
+    <title>Estilos em linha - Objeto</title>
 </head>
 <body>
     <div id="app">
-        <h4 v-cloak>{{ name }}</h4>
+
+        <input type="text" placeholder="Digite o tamanho da fonte" v-model="fontSizeProp">
+        <h2 :style="{fontSize: fontSizeProp + 'px' }">Evan You</h2>
+
+        <hr>
+
+        <h2>Digite o valor de cada cor nos campos abaixos</h2>
+
+        <input type="text" placeholder="Vermelho" v-model="styleRed">
+        <input type="text" placeholder="Verde" v-model="styleGreen">
+        <input type="text" placeholder="Azul" v-model="styleBlue">
+
+        <div :style="styleRgb">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur natus, beatae voluptas officia nihil temporibus et quidem sit harum reiciendis impedit cum minus est vero quia ducimus labore dolores similique.
+        </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
+    
     <script>
-        setTimeout(() =>{
-            let app = new Vue({
-                el: '#app',
-                data:{
-                    name: 'Han solo'
-                },
-            })
-        },1000)
+        let app = new Vue({
+            el: "#app",
+            data: {
+                fontSizeProp: 20,
+                styleRed: 255 ,
+                styleGreen: 105,
+                styleBlue: 80
+            },
+            computed: {
+                styleRgb(){
+
+                    return {
+                        color:`rgb(${this.styleRed},${this.styleGreen},${this.styleBlue} )`
+                    };
+                }
+            }
+        })
         
     </script>
 </body>

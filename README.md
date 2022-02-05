@@ -750,3 +750,60 @@ new Vue({
 <h2 v-edit-text="{size:10,color:'red'}">Vue.js is Awesome</h2>
 ```
 
+# Estilização em  linha
+
+```dotnetcli
+<span v-bind:style="{fontSize:tamanho + 'px'}">
+    Hcode Treinamentos
+</span>
+```
+
+## Porque usar?
+
+
+Uma página bem estilizada fica mais interesante de se acessar
+
+Por isso, o vue nos oferece vários recursos para estilização
+
+## Estilização com Classes
+
+```dotnetcli
+<ul>
+    <li v-bind:class="{active:isActive}">
+        Spider-Man
+    </li>
+</ul>
+```
+
+***Por que usar?**
+
+Facilitar a definição de estilos css em nossa aplicação
+
+Informar estilos de maneira dinâmica
+
+***Maneiras de criar**
+
+1 - Usando objestos
+2 - Usando arrays
+
+***Objestos**
+
+Informamos a diretiva **v-bind:style**
+na tag que desejamos estilizar
+
+Obs.: Podemos usar o padrão camelCase no nome das propriedades Css
+
+### Exemplos
+
+```dotnetcli
+<p v-bind:style="{ fontFamily:propriedade}">Hcode Treinamentos</p>
+
+<div v-bind:style="propriedade_objeto">Vue.js</div>
+
+data:{
+    propriedade_objeto:{
+        fontSize:'20px'
+    }
+}
+```
+
