@@ -807,3 +807,19 @@ data:{
 }
 ```
 
+## Estilos com mútiplos valores
+
+# Múltiplos valores
+
+***Novidade versão 2.3 do Vue**
+
+Em alguns casos, podemos trabalhar com estilos CSS que podem ter mais de um valor
+
+Para isso,informamos um array com os valores, ainda usando a diretiva v-bind:style
+
+***Exemplos**
+
+```dotnetcli
+<div v-bind:style="{display:['-webkit','flex','block']}">Vue.js</div>
+```
+
