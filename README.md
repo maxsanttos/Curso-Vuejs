@@ -823,3 +823,25 @@ Para isso,informamos um array com os valores, ainda usando a diretiva v-bind:sty
 <div v-bind:style="{display:['-webkit','flex','block']}">Vue.js</div>
 ```
 
+## Estilos usando Arrays
+
+### Arrays
+
+Informamos a diretiva **v-bind:style**
+na tag que desejamos estilizar
+
+Usando um array para que mais de um estilo seja aplicado no mesmo elemento
+
+***Exemplos**
+
+```dotnetcli
+<p v-bind:style="[estilo1,estilo2]">Hcode Treinamentos</p>
+data:{
+    estilos1:{
+        fontSize:'20px'
+    },
+    estilos2:{
+        color:'orage'
+    }
+}
+```
