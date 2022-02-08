@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilização-em-multiplas-linhas</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+
+        <div style="display: ;">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt repudiandae, culpa nisi cumque odit esse eveniet inventore mollitia, quia commodi repellat ad dolore minima veniam dolorem officiis. Facilis, doloribus ipsam.
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    
+    <script>
+        
+        let app = new Vue({
+            el: '#app',
+            data: {
+                displayStyle: ['-wenkit-box','-moz-box-flex','-ms-flebox']
+            },
+        })
+       
+        
+    </script>
+</body>
+</html>

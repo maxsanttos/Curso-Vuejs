@@ -4,29 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diretiva - v-cloak</title>
-    <style>
-        [v-cloak]{
-            display: none;
-        }
-    </style>
+    <title>Estilização em linha</title>
 </head>
 <body>
-    <div id="app">
-        <h4 v-cloak>{{ name }}</h4>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue2-filters/dist/vue2-filters.min.js"></script>
-    <script>
-        setTimeout(() =>{
-            let app = new Vue({
-                el: '#app',
-                data:{
-                    name: 'Han solo'
-                },
-            })
-        },1000)
-        
-    </script>
+   <div id="app">
+       <input type="text" placeholder="Digite o tamanho da fonte" v-model="fontSizeProp">
+
+        <h2 :style="{fontSize: fontSizeProp + 'px'}">Evan You</h2>
+
+        <hr>
+
+        <h2>DIgite o valor de cada cor nos campos abaixo</h2>
+
+        <input type="text" placeholder="Vermelho"v-model="styleRed">
+        <input type="text" placeholder="Verde"v-model="styleGreen">
+        <input type="text" placeholder="Azul"v-model="styleBlue">
+
+        <div :style="styleRgb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, iure dolor corrupti ea facilis aliquid nam inventore error dolore nostrum molestiae, deleniti natus sapiente velit in. Aut hic culpa consectetur.</div>
+   </div> 
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+   <script>
+       let app =new Vue({
+           el: '#app',
+           data:{
+               fontSizeProp: 20,
+               styleRed: 255,
+               styleGreen: 105,
+               styleBlue: 80
+            },
+            computed: {
+                styleRgb(){
+                    return {
+                        color:`rgb(${this.styleRed},${this.styleGreen},${this.styleBlue})`
+                    }
+                }
+            }
+       })
+   </script>
 </body>
 </html>
