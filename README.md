@@ -845,3 +845,38 @@ data:{
     }
 }
 ```
+
+## Aplicando classes usando objetos
+
+***Por que usar?**
+
+Em vários casos preferimos usar classes ao invés de estilos em linha
+
+Podemos aplicar classes em nossa aplicação de maneira dinâmica
+
+***Maneiras de Criar**
+
+1 - Usando objetos
+
+2 - Usando arrays
+
+## Objetos
+
+Informamos a diretiva **v-bind:class**
+na tag que desejamos estilizar
+
+Usando chaves para informar o objeto com
+o nome da classe e a condição para ela ser aplicada
+
+```dotnetcli
+<p v-bind:class="{classe: condicao}">Lorem Ipsum.</p>
+
+<h3 v-bind:class="classe_objeto">Hcode</h3>
+
+data:{
+    classe_objeto:{
+        linked:true,
+        active:false
+    }
+}
+```

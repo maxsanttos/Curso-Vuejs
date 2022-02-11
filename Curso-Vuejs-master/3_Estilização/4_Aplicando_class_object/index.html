@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estilos-linhas - arrays</title>
+    <title>Estilos com classes - objeto</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .logged{
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <a href="https://www.hcode.com.br/" :style="[fontSizeStyle,colorStyle,linkStyle]">Hcode Treinamentos</a>
+
+        <h1 v-bind:class="{ logged: isLogged }">Seja bem-vindo ao Sistema</h1>
+
+        <hr>
+
+        <h3 v-bind:class="classMessage">{{ message }}</h3>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     
@@ -17,17 +30,18 @@
         let app = new Vue({
             el: '#app',
             data: {
-                fontSizeStyle:{
-                    fontSize: '30px',
-                },
-                colorStyle:{
-                    color: 'red'
-                },
-                linkStyle:{
-                    textDecoration: 'none'
-                }
-                
+                isLogged: false,
+                error: false,
             },
+            computed:{
+                message: function(){
+                    return (!this.error)? 'Está tudo bem' : 'Há algo errado';
+                   
+                },
+                classMessage: function(){
+                    return (!this.error)? 'alert-success' : 'alert-danger';
+                }
+            }
         })
        
         
