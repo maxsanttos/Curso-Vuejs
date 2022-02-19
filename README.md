@@ -760,7 +760,6 @@ new Vue({
 
 ## Porque usar?
 
-
 Uma página bem estilizada fica mais interesante de se acessar
 
 Por isso, o vue nos oferece vários recursos para estilização
@@ -880,3 +879,79 @@ data:{
     }
 }
 ```
+
+# Animações -Visão Geral da Seção
+
+***O que é?**
+
+Envolve uma série de estilos CSS que  ocorrem em sequência
+
+São como um Flip Book
+(Folioscópio)
+(Vários desenhos isolados)
+
+***Por que usar?**
+
+Animações trazem "vida" para nossa aplicação
+
+Deixam a p´agina agradável de se ver e navegar
+
+## Transições CSS
+
+```dotnetcli
+<transition name="transicao">
+    <table v-if="condicao">
+        <td>Han Solo</td>
+        <td>Luke Skywalker</td>
+    </table>
+</transition>
+
+.trasicao-enter, .transicao-leave-to { }
+```
+
+## Animações CSS
+
+```dotnetcli
+<transition name="transicao">
+    <div>
+        <h3>Vue.js</h3>
+    </div>
+</transition>
+
+
+@keyframes {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+```
+
+## Animações Personalizadas
+
+```dotnetcli
+<tansition enter-active-class="classe">
+    <ima src="/src/hcode.png">
+</transition>
+```
+
+## Animações com JavaScript
+
+```dotnetcli
+<transiton v-on:after-enter="metodo" v-on:before-leave="metodo">
+    <p>LOrem Ipsum</p>
+</transiton>
+```
+
+## Transição entre elementos
+
+```dotnetcli
+<transition name="slide">
+    <h2 v-if="logged">Seja bem-vindo Rafael</h2>
+    <h3 v-else>Realize login para entrar</h3>
+<transition>
+```
+
