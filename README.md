@@ -955,3 +955,52 @@ Deixam a p´agina agradável de se ver e navegar
 <transition>
 ```
 
+## Transições CSS
+
+***Como Criar?**
+
+É possível usar animações com as diretivas **v-if, v-show**
+ao trabalhar com componentes
+
+O Vue possui um componente para transições e animações: **<transition></transition>**
+Além disso, nos oferece classes padrão para definir o que ocorrerá na transição ou animação
+
+## Classes padrão
+
+classes de "entrada"   
+v-enter
+v-enter-to
+v-enter-active
+
+classes de "saída"
+v-leave
+v-leave-to
+v-leave-active
+
+## Classes de "entrada"
+
+**v-enter** - Quando a transição começa
+
+**v-enter-to** - Quando a transição termina (Novidade versão 2.1.8)
+
+**v-enter-active**- Aplicado durante toda a transição
+
+## Exemplo
+
+```dotnetcli
+<transition name="identificador">
+    <h2 v-if="codicao">Lorem Ipsum</h2>
+</transition>
+
+.identificador-enter-active {
+    trasition:opacity .5s ease;
+}
+
+.identificador-leave-active {
+    trasition:opacity .5s ease;
+}
+.identificador-enter, .identificador-leave-to{
+    opacity:0;
+}
+
+```
