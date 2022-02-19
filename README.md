@@ -1004,3 +1004,36 @@ v-leave-active
 }
 
 ```
+
+# Transições Vs Animações
+
+Transições -> Mudam um elemento de um estado inicial para um estado final
+
+Animações -> Mudam o estado de um elemento, mas com maior controle, maior complexidade
+
+***Como Criar?**
+
+Usamos o componente **<transition></transition>**
+
+Também temos acesso às classes padrão para a animação, mas com uma maior flexibilidade
+
+***Exemplo**
+
+```dotnetcli
+<transition name="identificador">
+    <div v-if="condicao">Texto de exemplo</div>
+</transition>
+
+.identificador-leave-active{
+    animation:animation_nome .5s reverse;
+}
+@keyfraames animation_nome {
+    from{
+        background: #fff;
+    }
+    to{
+        background: #999;
+    }
+}
+```
+
