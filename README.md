@@ -1037,3 +1037,36 @@ Também temos acesso às classes padrão para a animação, mas com uma maior fl
 }
 ```
 
+# Animações Personalizadas
+
+*** Como Criar?**
+
+Usamos o componente **<transition></transition>**
+
+Temos acesso a atributos padrão que correspondem às classes para animação ou transição
+
+**Atributos padrão**
+
+Atributos de entrada
+
+**enter-class**
+**enter-to-class**
+**enter-active-class**
+
+Atributos de Saída
+
+**leave-class**
+**leave-to-class**
+**leave-active-class**
+
+## Atributos de Entrada
+
+**enter-class**- Corresponde ao v-enter
+
+**enter-to-class**- Corresponde ao v-enter-to **(Novidade versão 2.1.8)**
+
+**enter-active-class** - Corresponde ao v-enter-active
+
+
+
+
