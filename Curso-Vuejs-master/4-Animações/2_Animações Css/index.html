@@ -15,11 +15,34 @@
   }
   @keyframes animation_first {
     from {
-      background: #fff;
+      background-color: blue;
     }
     to {
       background: #999;
     }
+  }
+  /**/
+
+  .animation-second-enter-active {
+    animation: animation_second 0.1s;
+  }
+  .animation-second-leave-active {
+    animation: animation_second 1.5s reverse;
+  }
+  @keyframes animation_second {
+    0% {
+      background-color: #fff;
+      font-size: 20px;
+    }
+    50% {
+      background-color: red;
+      font-size: 50px;
+    }
+    100% {
+      background-color: #fff;
+      font-size: 20px;
+    }
+
   }
 </style>
 <body>
