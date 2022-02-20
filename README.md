@@ -1039,7 +1039,7 @@ Também temos acesso às classes padrão para a animação, mas com uma maior fl
 
 # Animações Personalizadas
 
-*** Como Criar?**
+***Como Criar?**
 
 Usamos o componente **<transition></transition>**
 
